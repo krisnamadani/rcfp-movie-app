@@ -10,7 +10,7 @@ export default function AnimeDetail({ anime }: { anime: any }) {
       <div className="flex flex-row gap-5">
         <div className="w-full">
           <Image
-            src={anime.images.jpg.large_image_url}
+            src={anime.images.jpg.image_url}
             width={250}
             height={0}
             alt={anime.title}

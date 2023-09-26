@@ -11,7 +11,7 @@ export default function Widget(props: any) {
               <div
                 className="bg-cover bg-center"
                 style={{
-                  backgroundImage: `url(${item.images.jpg.large_image_url})`,
+                  backgroundImage: `url(${item.images.jpg.image_url})`,
                 }}
               >
                 <div className="relative h-72 w-full bg-[rgba(0,0,0,0.4)] transition duration-300 hover:bg-transparent">

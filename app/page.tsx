@@ -12,16 +12,17 @@ export default function Home() {
   const [anime, setAnime] = useState([])
 
   const search = searchParams.get('query') || ''
+  const page = searchParams.get('page') || 1
 
   useEffect(() => {
     const fetchAnime = async () => {
-      const response = await fetch(`https://api.jikan.moe/v4/anime?q=${search}&page=1`);
+      const response = await fetch(`https://api.jikan.moe/v4/anime?q=${search}&page=${page}`);
       const data = await response.json()
       setAnime(data.data)
     };
 
     fetchAnime();
-  }, [search]);
+  }, [search, page]);
 
   return (
     <div>
